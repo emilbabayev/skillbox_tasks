@@ -2,6 +2,7 @@ first_year = int(input('Введите первый год: '))
 second_year = int(input('Введите второй год: '))
 result = []
 
+
 for year in range(first_year, second_year + 1):
     temp = year
     while temp != 0:
