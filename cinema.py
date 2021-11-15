@@ -20,9 +20,9 @@ while True:
     if searched_film in films:
 
         while True:
-            action = input('Команды: добавить, вставить, удалить\n')
+            action = input('Команды: добавить, вставить, удалить\n').lower()
 
-            if action == 'добавить' or action == 'Добавить':
+            if action == 'добавить':
                 if searched_film in favs:
                     print('Фильм уже добавлен в ваш список')
                     print('Ваш текущий список:', favs)
@@ -34,7 +34,7 @@ while True:
                     print()
                 break
 
-            elif action == 'вставить' or action == 'Вставить':
+            elif action == 'вставить':
                 if searched_film in favs:
                     print('Фильм уже добавлен в ваш список')
                     print('Ваш текущий список:', favs)
@@ -52,7 +52,7 @@ while True:
                     print()
                 break
 
-            elif action == 'удалить' or action == 'Удалить':
+            elif action == 'удалить':
                 if not(searched_film in favs):
                     print('Такого фильма нет в вашем списке')
                     print('Ваш текущий список:', favs)
