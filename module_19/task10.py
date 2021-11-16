@@ -7,10 +7,7 @@ text = input('Введите строку: ')
 letters_dict = dict()
 
 for sym in text:
-    if sym in letters_dict.keys():
-        letters_dict[sym] += 1
-    else:
-        letters_dict[sym] = 1
+    letters_dict[sym] = letters_dict.get(sym, 0) + 1
 
 counts = list(letters_dict.values())
 
