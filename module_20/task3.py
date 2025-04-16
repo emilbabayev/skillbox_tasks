@@ -7,7 +7,7 @@
 
 
 def tuple_search(my_tuple, my_element):
-    count = my_tuple.count(my_element)
+    count = my_tuple.attempts(my_element)
     if count == 0:
         return ()
     elif count == 1:
