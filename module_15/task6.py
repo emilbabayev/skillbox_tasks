@@ -6,21 +6,18 @@
 
 word = input('Введите слово: ')
 sym_list = list(word)
-sym_count = []
 
-for i in range(len(sym_list)):
-    sym_count.append(True)
+check_unique = [True for _ in range(len(sym_list))]
 
 for i in range(len(sym_list)):
     for j in range(i + 1, len(sym_list)):
         if sym_list[i] == sym_list[j]:
-            sym_count[i] = False
-            sym_count[j] = False
+            check_unique[i], check_unique[j] = False, False
 
-counter = 0
-for i in range(len(sym_count)):
-    if sym_count[i]:
-        counter += 1
+unique_count = 0
+for el in check_unique:
+    if el:
+        unique_count += 1
 
-print('Кол-во уникальных букв:', counter)
+print('Кол-во уникальных букв:', unique_count)
 
